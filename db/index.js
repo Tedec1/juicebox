@@ -119,6 +119,9 @@ async function updatePost(id, fields) {
 		const setString = Object.keys(fields)
 		.map((key, index) => `${key}=$${index + 1}`)
 		.join(", ");
+		if (setString.length === 0) {
+			return;
+		  }
 		const {
 			rows: [post],
 		} = await client.query(
