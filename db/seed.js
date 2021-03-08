@@ -12,6 +12,7 @@ const {
 	createPostTag,
 	addTagsToPost,
 	getPostById,
+	getAllTags,
 	getPostsByTagName
 } = require("./index");
 
